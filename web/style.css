@@ -1,0 +1,64 @@
+.navbar h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.main {
+  padding: 20px;
+}
+
+.date {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#datepicker {
+  margin: 5px;
+  max-width: 100%;
+}
+
+#search {
+  margin: 5px;
+}
+
+.datepicker table tr td span.active {
+  background-color: #0b5ed7 !important;
+}
+
+#album_covers {
+  margin: auto;
+}
+
+.album_info {
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.album_info #album_title {
+  text-align: center;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+.carousel {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.album_cover {
+  border-radius: 10px;
+}
+
+.carousel-control-prev {
+  transform: translateX(20px);
+}
+
+.carousel-control-next {
+  transform: translateX(-20px);
+}
