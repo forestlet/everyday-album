@@ -2,7 +2,7 @@
 
 > [README-cn](README.md) & [online page](https://forestlet.github.io/everyday-album/)
 
-1. The purpose of this project is to create a "Every Album" website where everyone can find the records released on a certain day, especially on her/his birthday 🥳.
+1. The purpose of this project is to create a "Everyday Album" website where everyone can find the albums released on a certain day, especially on her/his birthday 🥳.
 
 ## Reference
 
