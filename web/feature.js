@@ -4,22 +4,30 @@ let current
 const album_cover_carousel = document.querySelector('#album_covers')
 const lang = navigator.language
 
+initAlbums()
+
 // init datepicker
 $('#datepicker').datepicker({
     language: lang,
-    endDate: "today",
+    format: "mm-dd",
     maxViewMode: 2,
     todayHighlight: true,
     todayBtn: "linked",
 });
 
-album_cover_carousel.addEventListener('slid.bs.carousel', function (e) {
+album_cover_carousel.addEventListener('slide.bs.carousel', function (e) {
     current = e.to;
     changeAlbumInfo()
 })
 
 $.getJSON("../asset/album.json", (data) => {
     albums = data
+}).then(() => {
+    let date = getQueryString("date")
+    if (date != null) {
+        searchAlbums(date)
+        $('#datepicker').val(date)
+    }
 })
 
 // add fn format
@@ -44,14 +52,18 @@ Date.prototype.format = function (fmt) {
     return fmt;
 }
 
-initAlbums()
-
 $("#search").click(() => {
     initAlbums()
 
     if (!$('#datepicker').val()) return
 
     let pick_date = new Date($('#datepicker').val()).format("MM-dd");
+
+    searchAlbums(pick_date)
+})
+
+function searchAlbums(pick_date) {
+    history.replaceState(null, null, window.location.origin + window.location.pathname + "?date=" + pick_date)
 
     albums.forEach(album => {
         if (album.release_time.replace(/\d\d\d\d-/, "") == pick_date) {
@@ -62,7 +74,7 @@ $("#search").click(() => {
     if (date_albums.length != 0) showCarousel()
 
     if (date_albums.length == 1) singleAlbum()
-})
+}
 
 function changeAlbumInfo() {
     $('#album_title').text(date_albums[current]["title"])
@@ -105,4 +117,14 @@ function singleAlbum() {
     $(".carousel-indicators").hide()
     $(".carousel-control-prev").hide()
     $(".carousel-control-next").hide()
+}
+
+// 获得 url 参数
+function getQueryString(name) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return decodeURIComponent(r[2]);
+    };
+    return null;
 }
