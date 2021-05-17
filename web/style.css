@@ -3,6 +3,17 @@
   width: 100%;
 }
 
+.navbar #url {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.navbar .nav_btns {
+  float: right;
+  margin: 0 10px;
+}
+
 .main {
   padding: 20px;
 }
@@ -61,4 +72,11 @@
 
 .carousel-control-next {
   transform: translateX(-20px);
+}
+
+.copy_toast {
+  position: fixed;
+  right: 10px;
+  bottom: 80px;
+  width: 120px;
 }

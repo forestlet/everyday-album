@@ -15,6 +15,18 @@ $('#datepicker').datepicker({
     todayBtn: "linked",
 });
 
+// init tooltip
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+// init toast
+var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl)
+})
+
 album_cover_carousel.addEventListener('slide.bs.carousel', function (e) {
     current = e.to;
     changeAlbumInfo()
@@ -71,9 +83,12 @@ function searchAlbums(pick_date) {
         }
     });
 
-    if (date_albums.length != 0) showCarousel()
-
-    if (date_albums.length == 1) singleAlbum()
+    if (date_albums.length == 0) {
+        $("#no_album").show()
+    } else {
+        showCarousel()
+        if (date_albums.length == 1) singleAlbum()
+    }
 }
 
 function changeAlbumInfo() {
@@ -83,6 +98,7 @@ function changeAlbumInfo() {
 }
 
 function initAlbums() {
+    $("#no_album").hide()
     $(".album_info").hide()
     $(".carousel-indicators").hide()
     $(".carousel-control-prev").hide()
@@ -128,3 +144,11 @@ function getQueryString(name) {
     };
     return null;
 }
+
+$("#share").click(() => {
+    $("#url").text(window.location.href)
+    let url = document.getElementById("url")
+    url.select();
+    document.execCommand("Copy");
+    $('.toast').toast('show');
+})

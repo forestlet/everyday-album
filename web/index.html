@@ -20,10 +20,16 @@
 
 <body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="navbar">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">🥁🎹🎷🎻🪕🎸🎺📯</span>
-            <a href="https://github.com/forestlet/everyday-album" class="btn btn-dark" style="float: right; ">
+    <nav class="navbar navbar-light bg-light" aria-label="navbar">
+        <span class="navbar-brand mb-0 h1">🥁🎹🎷🎻🪕🎸🎺📯</span>
+        <div class="nav_btns">
+            <textarea id="url"></textarea>
+            <button class="btn btn-primary" id="share" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="share">
+                <i class="bi bi-box-arrow-up"></i>
+            </button>
+            <a href="https://github.com/forestlet/everyday-album" class="btn btn-dark" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" title="github">
                 <i class="bi bi-github"></i>
             </a>
         </div>
@@ -37,7 +43,8 @@
                     placeholder="pick up a date~">
             </div>
             <div class="col-lg-1 col-sm-2 col-2">
-                <button type="button" class="btn btn-primary" id="search">
+                <button type="button" class="btn btn-primary" id="search" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="search">
                     <i class="bi bi-music-note-beamed"></i>
                 </button>
             </div>
@@ -77,6 +84,11 @@
             </div>
             <div class="col-lg-2 col-sm-0"> </div>
         </div>
+        <div class="row">
+            <div class="col-12" id="no_album" style="display: none;">
+                Sorry, we can't find any albums released on this date in our database :(
+            </div>
+        </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
@@ -88,6 +100,18 @@
         </div>
     </footer>
 
+    <div class="copy_toast">
+        <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive"
+            aria-atomic="true" id="toast" data-bs-delay="1000">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Copied!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
