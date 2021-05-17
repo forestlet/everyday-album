@@ -17,6 +17,14 @@
    }
    ```
 
+## change log
+
+- [x] 2021-05-16 init repository
+- [x] 2021-05-16 build GitHub page
+- [x] 2021-05-17 add params in url
+- [x] 2021-05-17 eliminate album info delay
+- [ ] add i18n
+
 ## Reference
 
 1. [uxsolutions/bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)

@@ -17,6 +17,14 @@
    }
    ```
 
+## 日志
+
+- [x] 2021-05-16 初始化项目
+- [x] 2021-05-16 搭建 GitHub page
+- [x] 2021-05-17 增加网址参数查询
+- [x] 2021-05-17 消除唱片信息延迟
+- [ ] 增加多语言支持
+
 ## 参考
 
 1. [uxsolutions/bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)
