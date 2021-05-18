@@ -9,10 +9,11 @@ initAlbums()
 // init datepicker
 $('#datepicker').datepicker({
     language: lang,
-    format: "mm-dd",
+    format: "yyyy-mm-dd",
     maxViewMode: 2,
     todayHighlight: true,
     todayBtn: "linked",
+    autoclose: true
 });
 
 // init tooltip
@@ -69,7 +70,7 @@ $("#search").click(() => {
 
     if (!$('#datepicker').val()) return
 
-    let pick_date = new Date($('#datepicker').val()).format("MM-dd");
+    let pick_date = new Date($('#datepicker').val()).format("yyyy-MM-dd");
 
     searchAlbums(pick_date)
 })
@@ -78,7 +79,7 @@ function searchAlbums(pick_date) {
     history.replaceState(null, null, window.location.origin + window.location.pathname + "?date=" + pick_date)
 
     albums.forEach(album => {
-        if (album.release_time.replace(/\d\d\d\d-/, "") == pick_date) {
+        if (album.release_time.replace(/\d\d\d\d-/, "") == pick_date.replace(/\d\d\d\d-/, "")) {
             date_albums.push(album)
         }
     });
