@@ -19,19 +19,28 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-
-    <nav class="navbar navbar-light bg-light" aria-label="navbar">
-        <span class="navbar-brand mb-0 h1">🥁🎹🎷🎻🪕🎸🎺📯</span>
-        <div class="nav_btns">
-            <textarea id="url"></textarea>
-            <button class="btn btn-primary" id="share" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="share">
-                <i class="bi bi-box-arrow-up"></i>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" aria-label="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🥁🎹🎷🎻🪕🎸🎺📯</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsBtns"
+                aria-controls="navbarsBtns" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="https://github.com/forestlet/everyday-album" class="btn btn-dark" data-bs-toggle="tooltip"
-                data-bs-placement="bottom" title="github">
-                <i class="bi bi-github"></i>
-            </a>
+
+            <div class="collapse navbar-collapse" id="navbarsBtns">
+                <div class="navbar-nav me-auto mb-2 mb-sm-0"> </div>
+                <div>
+                    <textarea id="url"></textarea>
+                    <button class="btn btn-primary" id="share" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="share">
+                        <i class="bi bi-box-arrow-up"></i>
+                    </button>
+                    <a href="https://github.com/forestlet/everyday-album" class="btn btn-dark" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="github">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
