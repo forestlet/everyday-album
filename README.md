@@ -10,10 +10,10 @@
 
    ```json
    {
-     "title": "xxx", // 唱片名
-     "artist": "xxx", // 作者
-     "release_time": "xxxx-xx-xx", // 发行时间
-     "filename": "xxx.jpg" // 封面文件名
+     "title": "xxx",
+     "artist": "xxx",
+     "release_time": "xxxx-xx-xx",
+     "filename": "xxx.jpg"
    }
    ```
 

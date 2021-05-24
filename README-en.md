@@ -10,10 +10,10 @@
 
    ```json
    {
-     "title": "xxx", // title
-     "artist": "xxx", // artist
-     "release_time": "xxxx-xx-xx", // release time
-     "filename": "xxx.jpg" // filename for cover image
+     "title": "xxx",
+     "artist": "xxx",
+     "release_time": "xxxx-xx-xx",
+     "filename": "xxx.jpg"
    }
    ```
 
