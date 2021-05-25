@@ -1,0 +1,13 @@
+{
+    "title": "Everyday Album",
+    "share": "share",
+    "github": "github",
+    "datepicker": "pick up a date~",
+    "search": "search",
+    "album_artist_badge": "artist",
+    "album_release_time_badge": "release time",
+    "no_album": "Sorry, we can't find any albums released on this date in our database :(",
+    "footer_text": "If you want to add an album or have any issues, please",
+    "submit": " submit ",
+    "copied": "url copied"
+}

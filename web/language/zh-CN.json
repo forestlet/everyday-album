@@ -1,0 +1,13 @@
+{
+    "title": "每日唱片",
+    "share": "分享",
+    "github": "github",
+    "datepicker": "挑个日期吧~",
+    "search": "搜索",
+    "album_artist_badge": "创作者",
+    "album_release_time_badge": "发行时间",
+    "no_album": "不好意思，我们数据库中没有找到这天发行的唱片的数据 :(",
+    "footer_text": "如果您想添加一些唱片，或者想指出一些问题，请",
+    "submit": " 提交 ",
+    "copied": "网址已复制"
+}
