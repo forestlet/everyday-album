@@ -24,6 +24,8 @@
 - [x] 2021-05-17 add params in url
 - [x] 2021-05-17 eliminate album info delay
 - [ ] add i18n
+  - [x] 2021-5-25 zh-CN
+  - [x] 2021-5-25 en
 
 ## Reference
 
