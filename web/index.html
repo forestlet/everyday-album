@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Everyday Album">
     <meta name="author" content="forestlet">
-    <title>Everyday Album</title>
+    <title></title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 115 115%22><text y=%22.9em%22 font-size=%2290%22>🎼</text></svg>">
 
@@ -32,11 +32,11 @@
                 <div>
                     <textarea id="url"></textarea>
                     <button class="btn btn-primary" id="share" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="share">
+                        title="">
                         <i class="bi bi-box-arrow-up"></i>
                     </button>
-                    <a href="https://github.com/forestlet/everyday-album" class="btn btn-dark" data-bs-toggle="tooltip"
-                        data-bs-placement="bottom" title="github">
+                    <a href="https://github.com/forestlet/everyday-album" id="github" class="btn btn-dark"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
                         <i class="bi bi-github"></i>
                     </a>
                 </div>
@@ -49,11 +49,11 @@
             <div class="col-lg-2 col-sm-0"> </div>
             <div class="col-lg-7 col-sm-10 col-10">
                 <input type="txt" class="form-control" id="datepicker" data-provide="datepicker" required
-                    placeholder="pick up a date~">
+                    placeholder="">
             </div>
             <div class="col-lg-1 col-sm-2 col-2">
                 <button type="button" class="btn btn-primary" id="search" data-bs-toggle="tooltip"
-                    data-bs-placement="bottom" title="search">
+                    data-bs-placement="bottom" title="">
                     <i class="bi bi-music-note-beamed"></i>
                 </button>
             </div>
@@ -81,13 +81,14 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-12">
-                <div class="album_info" style="display: none;">
+                <div class="album_info">
                     <h5 id="album_title"></h5>
                     <p>
-                        <span class="badge bg-primary">artist</span> <span id="album_artist"></span>
+                        <span class="badge bg-primary" id="album_artist_badge"></span> <span id="album_artist"></span>
                     </p>
                     <p>
-                        <span class="badge bg-primary">release time</span> <span id="album_release_time"></span>
+                        <span class="badge bg-primary" id="album_release_time_badge"></span> <span
+                            id="album_release_time"></span>
                     </p>
                 </div>
             </div>
@@ -95,17 +96,15 @@
         </div>
         <div class="row">
             <div class="col-12" id="no_album" style="display: none;">
-                Sorry, we can't find any albums released on this date in our database :(
             </div>
         </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-            <span class="text-muted">If you want to add an album or have any issues, please
-                <a href="https://github.com/forestlet/everyday-album/issues/new" class="btn btn-success btn-sm"> submit
-                </a>
-            </span>
+            <span class="text-muted" id="footer_text"> </span>
+            <a href="https://github.com/forestlet/everyday-album/issues/new" class="btn btn-success btn-sm" id="submit">
+            </a>
         </div>
     </footer>
 
@@ -113,8 +112,7 @@
         <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive"
             aria-atomic="true" id="toast" data-bs-delay="1000">
             <div class="d-flex">
-                <div class="toast-body">
-                    Copied!
+                <div class="toast-body" id="copied">
                 </div>
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
                     aria-label="Close"></button>
